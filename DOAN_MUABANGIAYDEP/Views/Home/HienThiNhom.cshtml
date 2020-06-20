@@ -1,0 +1,11 @@
+﻿ @using DOAN_MUABANGIAYDEP.Models;
+@model List<Nhom>
+<div class="row">
+ @foreach (var n in Model)
+    { 
+      <div class="nav-item active">
+        <a class="nav-link text-white" href="@Url.Action("HienThiTheoNhom", new {mn=@n.MaNhom })" style="font-size:16px;font-weight:bold"> @n.TenNhom <span class="sr-only">(current)</span> </a>
+        
+          </div>
+    }
+    </div>

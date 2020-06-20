@@ -1,0 +1,59 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DangKy</title>
+     <link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <div class="container">
+        <div class="form bg-light mt-5">
+    <form action="@Url.Action("XLDangKy")" method="post">
+                   <div class="lead">
+                       <div class ="font-weight-bold text-danger text-center">
+                            <br />
+                            <br />
+                        &nbsp&nbsp&nbsp  ĐĂNG KÝ TÀI KHOẢN KHÁCH HÀNG<span class="sr-only">(current)</span>
+                       </div>
+                          </div>
+    <br />
+
+                <div class="form-group col-md-6">
+                    
+                         <input class="form-control text-center" type="text" placeholder="Họ và tên" name="txtHoTen"  style="margin-left:300px"/>
+                  <br />
+                        <input class="form-control text-center" type="text" placeholder="Ngày Sinh (MM/dd/yyyy)" name="txtNgaySinh"  style="margin-left:300px"/>
+                  <br />
+                         <input class="form-control text-center" type="text" placeholder="Giới tính" name="txtGioiTinh"  style="margin-left:300px"/>
+                  <br />
+                         <input class="form-control text-center" type="text" placeholder="Tên tài khoản" name="txtTenTK"  style="margin-left:300px"/>
+                  <br />
+                          <input class="form-control text-center" type="password" placeholder="Mật khẩu" name="txtMatKhau" style="margin-left:300px"/>
+                  <br />
+                          <input class="form-control text-center" type="email" placeholder="Email" name="txtEmail"  style="margin-left:300px"/>
+                  <br />
+                         <input class="form-control text-center" type="text" placeholder="Điện thoại" name="txtDienThoai"  style="margin-left:300px"/>
+                  <br />
+                          <input class="form-control text-center" type="text" placeholder="Địa chỉ" name="txtDiaChi"  style="margin-left:300px"/>
+                
+                    </div>
+                  <div class="form-group text-center">
+                         <button name="btnDangKy" type="submit" class="btn btn-danger">ĐĂNG KÝ</button>
+                    </div>
+                  <br />
+                  
+            </form>
+          </div>
+            </div>
+    </div>
+    <script src="~/Content/jquery-3.3.1.min.js"></script>
+    <script src="~/Content/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

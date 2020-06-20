@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "ThanhToan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanh Toán Hóa Đơn</title>
+     <link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <div class="container">
+            <div class="form bg-light mt-5">
+                <form action="@Url.Action("Index","Home")" method="post">   
+                    <h1>Giao dịch thành công!!!!</h1>                    
+                    <a>Chúng tôi sẽ giao hàng đúng hạn</a>
+                         <p><input name="btnXacNhan" type="submit" value="OK" class="btn btn-danger"/></p>
+                        
+                </form>
+            </div> 
+        </div>
+    </div>
+     <script src="~/Content/jquery-3.3.1.min.js"></script>
+    <script src="~/Content/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿body {
+
+}
+.offcanvas-collapse {
+    top: 10px;
+    bottom: 0;
+    width:20px;
+  }
+.sanpham {
+    padding-top:5px;
+    padding-left:20px;
+    width:200px;
+    height:350px;
+    border:solid 1px;
+    float:left;
+}
+.khung {
+    width:100%;
+}
+.item {
+    width:25%;
+    float:left;
+}
+.item-label {
+    width:100%;
+    text-align:center;
+}
+.hinh {
+    text-align:center;
+}

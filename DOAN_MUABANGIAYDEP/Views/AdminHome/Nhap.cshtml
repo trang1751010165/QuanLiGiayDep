@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Nhap";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+
+<div class="container">
+  
+<form action="@Url.Action("Nhap","AdminHome")" method="post">
+     <div class ="font-weight-bold text-danger text-center">
+                            <br />
+                            <br />
+                        &nbsp&nbsp&nbsp  NHẬP THÊM MỘT SẢN PHẨM MỚI<span class="sr-only">(current)</span>
+         <br />
+    </div>
+     <div class="form-group col-md-6">
+                    
+                         <input class="form-control text-center" type="text" placeholder="Mã sản phẩm" name="txtMa"  style="margin-left:300px"/>
+                  <br />
+                         <input class="form-control text-center" type="text" placeholder="Tên sản phẩm" name="txtTen"  style="margin-left:300px"/>
+                  <br />
+                         <input class="form-control text-center" type="text" placeholder="Giá sản phẩm" name="txtGia"  style="margin-left:300px"/>
+                  <br />
+                          <input class="form-control text-center" type="text" placeholder="Mô tả" name="txtMoTa" style="margin-left:300px"/>
+                  <br />
+         <a style="margin-left:300px">Hình: </a> <input type="file" class="form-control" name="FileHinh" style="margin-left:300px" /> 
+         <br/>
+                  <br />
+                         <input class="form-control text-center" type="text" placeholder="Ngày cập nhật" name="txtNCN"  style="margin-left:300px"/>
+                  <br />
+                          <input class="form-control text-center" type="text" placeholder="Số lượng tồn" name="txtSLT"  style="margin-left:300px"/>
+         <br />
+                          <input class="form-control text-center" type="text" placeholder="Mã nhóm" name="txtMaNhom"  style="margin-left:300px"/>
+         <br />
+                          <input class="form-control text-center" type="text" placeholder="Kích thước" name="txtKichThuoc"  style="margin-left:300px"/>
+                
+                    </div>
+                  <div class="form-group text-center">
+                         <button name="btnThêm" type="submit" class="btn btn-danger">Thêm</button>
+                    </div>
+                  <br />
+    
+    </form>
+    </div>

@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Sua";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+@using DOAN_MUABANGIAYDEP.Models;
+@model SanPham
+<form action="@Url.Action("XLSua", "AdminHome")" method="post">
+
+     <div class ="font-weight-bold text-danger text-center">
+                            <br />
+                            <br />
+                        &nbsp&nbsp&nbsp CẬP NHẬT THÔNG TIN SẢN PHẨM<span class="sr-only">(current)</span>
+         <br />
+    </div>
+     <div class="form-group col-md-6">
+                    
+                         <input class="form-control text-center" type="text" placeholder="Mã sản phẩm" name="txtMa" value="@ViewData["txtMa"]" style="margin-left:300px"/>
+                  <br />
+                         <input class="form-control text-center" type="text" placeholder="Tên sản phẩm" name="txtTen" value="@ViewData["txtTen"]" style="margin-left:300px"/>
+                  <br />
+                         <input class="form-control text-center" type="text" placeholder="Giá sản phẩm" name="txtGia" value="@ViewData["txtGia"]" style="margin-left:300px"/>
+                  <br />
+                          <input class="form-control text-center" type="text" placeholder="Mô tả" name="txtMoTa" value="@ViewData["txtMoTa"]" style="margin-left:300px"/>
+                  <br />
+         <a style="margin-left:300px">Hình: </a> <input type="file" class="form-control" name="FileHinh" value="@ViewData["FileHinh"]" style="margin-left:300px" /> 
+         <br/>
+                  <br />
+                         <input class="form-control text-center" type="text" placeholder="Ngày cập nhật" name="txtNCN" value="@ViewData["txtNCN"]" style="margin-left:300px"/>
+                  <br />
+                          <input class="form-control text-center" type="text" placeholder="Số lượng tồn" name="txtSLT" value="@ViewData["txtSLT"]" style="margin-left:300px"/>
+         <br />
+                          <input class="form-control text-center" type="text" placeholder="Mã nhóm" name="txtMaNhom" value="@ViewData["txtMaNhom"]" style="margin-left:300px"/>
+         <br />
+                          <input class="form-control text-center" type="text" placeholder="Kích thước" name="txtKichThuoc" value="@ViewData["txtKichThuoc"]" style="margin-left:300px"/>
+                
+                    </div>
+                  <div class="form-group text-center">
+                         <button name="btnLuu" type="submit" class="btn btn-danger">Lưu</button>
+                    </div>
+                  <br />
+
+    </form>

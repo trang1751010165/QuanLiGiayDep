@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "DatHang";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+@using DOAN_MUABANGIAYDEP.Models;
+@model KhachHang
+<div class="form-row justify-content-center">
+<h2>THÔNG TIN ĐẶT HÀNG</h2>
+  </div>
+<form action="@Url.Action("XLDatHang","GioHang")" method="post">
+    
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            </div>
+        <div class="form-group col-md-2" style="text-align:left">
+        <label>Họ tên khách hàng: </label>
+            </div>
+        <div class="form-group col-md-6">
+            @Model.HoTen
+            </div>
+    </div>
+     <div class="form-row">
+         <div class="form-group col-md-4">
+            </div>
+        <div class="form-group col-md-2" style="text-align:left">
+        <label>Số điện thoại: </label>
+            </div>
+        <div class="form-group col-md-6">
+        @Model.DienThoai
+            </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            </div>
+        <div class="form-group col-md-2" style="text-align:left">
+        <label>Email: </label>
+            </div>
+        <div class="form-group col-md-6">
+        @Model.Email
+            </div>
+    </div>
+     <div class="form-row">
+         <div class="form-group col-md-4">
+            </div>
+        <div class="form-group col-md-2" style="text-align:left">
+        <label>Địa chỉ: </label>
+            </div>
+        <div class="form-group col-md-6">
+        @Model.DiaChi
+            </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            </div>
+        <div class="form-group col-md-2" style="text-align:left">
+        <label>Ngày đặt: </label>
+            </div>
+        <div class="form-group">
+        @DateTime.Now.ToShortDateString()
+            </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            </div>
+        <div class="form-group col-md-2" style="text-align:left">
+        <label>Ngày giao: </label>
+            </div>
+        <div class="form-group col-md-2">
+        <input type="text" name="txtNgayGiao" class="form-control"/>
+            </div>
+    </div>
+
+     <div class="form-row">
+        <div class="form-group col-md-4">
+            </div>
+        <div class="form-group col-md-2" style="text-align:left">
+        <label>Hình Thức Thanh Toán: </label>
+            </div>
+        <div class="form-group col-md-2">
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="defaultUnchecked" name="rdoTien">
+                <label class="custom-control-label" for="defaultUnchecked">Thanh Toán Tiền Mặt</label>
+            </div>
+            <div class="custom-control custom-radio">
+                <!-- Default checked -->
+                <input type="radio" class="custom-control-input" id="defaultChecked" name="rdoTien" checked>
+                <label class="custom-control-label" for="defaultChecked">Thẻ</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-row" >
+      <div class="form-group col-md-6" ></div>
+        <div class="form-group " > 
+                <a href="@Url.Action("XacNhanDonHang","GioHang")" class="btn btn-danger">THANH TOÁN NGAY</a> &nbsp&nbsp&nbsp
+                <button name="btnDangNhap" type="submit" class="btn btn-danger">ĐỂ SAU</button>
+          
+        </div>
+     </div>
+
+</form>
+

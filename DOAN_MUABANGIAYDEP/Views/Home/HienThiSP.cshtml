@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "HienThiSP";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using DOAN_MUABANGIAYDEP.Models;
+@model List<SanPham>
+  <div class=" text-danger">   
+   <div><marquee direction="left"  scrollamount="10" style ="color:red;font-weight:bold">Chào mừng @Session["dn"] đã đến với trang mua sắm của shop GiayDepXinh (^_^).Hãy nhanh tay chọn cho riêng mình những sản phẩm tốt-đẹp-chất lượng và sẽ có cơ hội nhận những phần quà siêu hấp dẫn tại shop!!(^_-)</marquee></div>
+         </div>
+<div class="khung">
+    @foreach(var sp in Model)
+    {
+        <div class= "item">
+            <div class="hinh">
+            <img src="~/Content/Image/@sp.HinhAnh" width="180" height="200"  />
+                </div>
+            <p class="item-label">
+                @sp.TenSP 
+                <br />
+                Size:@sp.Size
+                <br />
+                 Giá:  @sp.Gia <ins class="text-danger">Đồng</ins>
+            </p><br />
+           <div class="form-row">
+               <div class="form-group col-md-6 text-center">
+            
+                <a href="@Url.Action("ChiTiet1SP","Home",new {msp = @sp.MaSP })" class="btn btn-danger">Chi tiết</a>
+            
+                   </div>
+               <div class="form-group col-md-auto">
+            <a href="@Url.Action("ThemGioHang","GioHang", new { msp = @sp.MaSP, @strUrl=Request.Url.ToString() })" class="btn btn-danger">Đặt mua</a>
+                   </div>
+                </div>
+        </div>
+    }
+</div>
+
+
+
+

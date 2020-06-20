@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "HienThiTheoNhom";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using DOAN_MUABANGIAYDEP.Models;
+@model List<SanPham>
+<div class="container">
+<div class="form-row">
+<div class="khung">
+    @foreach(var sp in Model)
+    {
+        <div class= "item">
+            <div class="hinh">
+            <img src="~/Content/Image/@sp.HinhAnh" width="250" height="260"  />
+                </div>
+            <p class="item-label">
+                @sp.TenSP 
+                <br />
+                Size:@sp.Size
+                <br />
+                 Giá:  @sp.Gia <ins class="text-danger">Đồng</ins>
+            </p><br />
+           <div class="form-row">
+               <div class="form-group col-md-6 text-center">
+            
+                <a href="@Url.Action("ChiTiet1SP","Home",new {msp = @sp.MaSP })" class="btn btn-danger">Chi tiết</a>
+            
+                   </div>
+               <div class="form-group col-md-auto">
+            <a href="@Url.Action("ThemGioHang","GioHang", new { msp = @sp.MaSP, @strUrl=Request.Url.ToString() })" class="btn btn-danger">Đặt mua</a>
+                   </div>
+                </div>
+        </div>
+    }
+</div>
+    </div>
+    </div>

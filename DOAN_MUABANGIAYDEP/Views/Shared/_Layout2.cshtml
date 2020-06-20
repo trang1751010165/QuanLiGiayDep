@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+     <div class="container">
+         <div class="fixed-top">
+        <div class="form bg-white">
+        <div class="form-inline ">
+            <div class="form-group col-md-2">
+                 <div class="font-italic">
+                        <div class="lead">
+                      <a class="lead text-danger"  href="@Url.Action("Home","TrangChu")"> 
+                          <h3> GiayDepXinh</h3>
+                      </a>
+                       </div>
+                </div>
+            </div>
+            <div class="form-group col-md-2 mr-auto">
+                &nbsp 
+                <div class="text-font-weight text-info">
+                Nâng niu bàn chân Việt
+                    </div>
+            </div>
+                <div class="form-group col-md-8 mr-auto">
+                    
+                     <form  class="form-inline" action="@Url.Action("Home","TrangChu")" method="post" style="margin-left:10px">
+                        <input class="form-control" type="text" name="txtTimKiem" placeholder="Tìm tên sản phẩm " />
+                        <button> <img src="~/Content/HinhAnh/tim.jpg" width="32px" height="32px"/></button>
+                    </form> &nbsp &nbsp &nbsp &nbsp &nbsp
+                    <a class="nav-link" style="color:red"><img src="~/Content/HinhAnh/giohang.png" width="50px" height="35px"/></a>
+                    <a class="nav-link text-danger font-weight-bold" href="@Url.Action("DangNhap","KhachHang")"> ĐĂNG NHẬP<span class="sr-only">(current)</span> </a>
+                    <a class="nav-link text-danger font-weight-bold" href="@Url.Action("DangKy","KhachHang")"> ĐĂNG KÝ<span class="sr-only">(current)</span> </a>
+                   <a class="nav-link text-danger font-weight-bold font-italic" href="@Url.Action("QuangCao","TrangChu")"> Xem mẫu quảng cáo<span class="sr-only">(current)</span> </a>
+
+                </div>
+         </div>
+            <div class="dropdown-divider"></div>
+                   <div class="form-inline justify-content-center">
+                       <div class="row">
+                    <div class ="nav mc-auto">
+               
+                   <div class="nav-item active">
+                        @*<a class="nav-link text-danger font-weight-bold" href="@Url.Action("HienThiSP","Home")"> TRANG CHỦ <span class="sr-only">(current)</span> </a>*@
+                    </div>
+                       @*@Html.Action("HienThiNhom","Home")*@
+                        </div>
+                </div>
+          </div>
+                </div>
+             </div>
+         </div>
+       
+    <div class="row flex-column" style="margin-top:100px">
+       @RenderBody()
+    </div>
+    <br />
+    <div class="footer font-weight-bold bg-danger " style="color:white; text-align:center; margin-top:5px">
+             <p style=" margin-left:10%">
+                <marquee direction="up" scrollamount="2">Môn: Lập trình Web<br />
+                    GV: Dương Thị Mộng Thùy<br />
+                    Thành Viên:
+                    <br />
+                     &nbsp;&nbsp;&nbsp;&nbsp;Trịnh Nhật Hào 
+                    <br />
+                     &nbsp;&nbsp;&nbsp;&nbsp;Nguyễn Thị Ngọc Ty <br />
+                     &nbsp;&nbsp;&nbsp;&nbsp;Đỗ Thị Quỳnh Như<br />
+                     &nbsp;&nbsp;꧁༺༒༻꧂&nbsp;&nbsp; ꧁༺༒༻꧂  
+                </marquee>
+            </p>
+    </div>
+   <div style="background-color:#ffaad4">
+    <div class="form  justify-content-center">
+        <div class="row">
+       <div class="form-group col-md-2">
+           
+            </div>
+      
+       <div class="form-group col-md-5">
+           <div class="font-weight-bold">
+                <a>TRỢ GIÚP</a><br />
+            </div>
+            <ul>
+                <li><a class="text-dark" href="@Url.Action("HuongDanMuaHang","Home")">Hướng dẫn mua hàng</a></li>
+                <li><a class="text-dark" href="@Url.Action("QuyDinhDoiTra","Home")">Quy định đổi trả</a></li>
+                <li><a class="text-dark" href="@Url.Action("PhuongThucVanChuyen","Home")">Phương thức vận chuyển</a></li>
+            </ul>
+        </div>
+        <div class="form-group col-md-5">
+           <div class="font-weight-bold">
+            <a>GIAYDEPXINH.COM.VN</a><br />
+               </div>
+                    <a class="text-dark">Địa chỉ: 77 Bùi Xuân Phái, P.Tây Thạnh, Q.Tân Phú, TP.HCM</a>
+                    <br />
+                  <a class="text-dark">Email: giaydepxinhtphcm@gmail.com</a>
+                  <br />
+                 <a class="text-dark">Fanpage: giaydepxinhtphcm/facebook.com.vn</a>
+          
+            </div>
+        </div>
+    </div>
+        </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+
+     <script src="~/Content/jquery-3.3.1.min.js"></script>
+    <script src="~/Content/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

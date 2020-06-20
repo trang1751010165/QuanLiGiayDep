@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "ChiTiet1SP";
+}
+@using DOAN_MUABANGIAYDEP.Models;
+@model SanPham
+
+<div class="container">
+<div class="form-row">
+    <div class="form-group col-md-5">
+<img src="~/Content/Image/@Model.HinhAnh" width="210" height="250" style="margin-left:120px"/>
+        </div>
+     <div class="form-group col-md-7 " style="margin-top:80px">
+         
+<a class="font-weight-bold"> Tên sản phẩm:</a><a class="font-weight-bold text-danger"> @Model.TenSP</a> <br />
+         
+<a class="font-weight-bold">Mô tả:</a> @Model.MoTa<br />
+             
+<a class="font-weight-bold">Size:</a> @Model.Size<br />   
+                
+<a class="font-weight-bold">Giá bán:</a> @Model.Gia <ins class="text-danger">Đồng</ins> <br />
+        
+  <a href="@Url.Action("ThemGioHang1", "GioHang", new {msp =@Model.MaSP })" class="btn btn-danger">Đặt mua</a>
+       </div>
+ 
+         </div>
+
+</div>
+

@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "XemGioHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using DOAN_MUABANGIAYDEP.Models;
+@model List<item>
+
+@if(Model != null)
+{
+   
+<table class="table">
+    <thead class="thead-light">
+    <tr class="table-active">
+        <td class="text-center">Mã sản phẩm</td>
+        <td class="text-center">Tên sản phẩm</td>
+        <td class="text-center">Hình ảnh</td>
+        <td class="text-center">Số lượng</td>
+        <td class="text-center">Đơn giá</td>
+        <td></td>
+        <td></td>
+    </tr>
+        </thead>
+    @foreach (var i in Model)
+    {
+    <tr >
+        <td class="text-center">@i.masp</td>
+        <td class="text-center">@i.tensp</td>
+        <td class="text-center"> <img src="~/Content/Image/@i.hinhanh" width="250" height="260"  /></td>
+        <td class="text-center">@i.soluong</td>
+        <td class="text-center">@i.gia</td>
+        <td class="text-center"><a href="@Url.Action("ChiTiet1SP", "Home", new {msp=@i.masp})">Chi tiết</a></td>
+        <td class="text-center"><a href="@Url.Action("Xoa1SP", "GioHang", new {ms=@i.masp})">Xóa</a></td>
+    </tr>
+       
+    }
+     <tr class="table-active">
+            <td colspan="3">Số lượng sản phẩm: @ViewBag.TongSL</td>
+            <td colspan="3">Thành tiền: @ViewBag.TongTien VND</td>
+          @if (Session["dn"] != null)
+          {
+         <td> <a class="nav-link" href="@Url.Action("DatHang","GioHang")" class="btn btn danger"> Xem đơn đặt hàng </a></td>
+          }
+         else
+         {
+               <td> <a class="nav-link" href="@Url.Action("DangNhap","KhachHang")"> Đăng nhập để đặt hàng </a></td>
+          }
+        </tr>
+</table>
+}
+     <div class="form-group text-center text-danger">   
+@if(Model == null)
+{
+    <h3>Giỏ hàng của bạn trống</h3>
+    <a href="@Url.Action("HienThiSP", "Home")">Mua sắm</a>
+}
+         </div>
+   
